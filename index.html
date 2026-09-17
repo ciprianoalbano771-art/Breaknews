@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensitive Content — 18+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#d42a2a">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1098711072684863');
+  fbq('init', '1604568204398485');
+  fbq('init', '2348820182312213');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1098711072684863&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1604568204398485&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2348820182312213&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+  <style>
+    :root { --bg:#000; --bg2:#141414; --bg3:#1f1f1f; --text:#fff; --text2:#a3a3a3; --accent:#f59e0b; --accent-txt:#000; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+
+    .barra { background:var(--bg); border-bottom:1px solid var(--bg3); }
+    .barra-in { max-width:760px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-weight:800; font-size:1.25rem; letter-spacing:-.02em; color:var(--text); text-decoration:none; }
+    .logo span { background:var(--accent); color:var(--accent-txt); border-radius:4px; padding:4px 8px; font-size:.85rem; letter-spacing:.03em; }
+    .aviso18 { font-size:.7rem; font-weight:800; color:var(--text2); border:1px solid var(--bg3); border-radius:4px; padding:3px 6px; }
+
+    .conteudo { max-width:760px; margin:0 auto; }
+
+    .player { position:relative; aspect-ratio:16/9; background:#000; overflow:hidden; }
+    .player video { width:100%; height:100%; object-fit:cover; filter:blur(22px) brightness(.5); transform:scale(1.15); pointer-events:none; -webkit-user-select:none; user-select:none; }
+    .lock { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+    .lock .play { width:64px; height:64px; border-radius:50%; background:rgba(0,0,0,.55); border:2px solid rgba(255,255,255,.85);
+                  display:flex; align-items:center; justify-content:center; }
+    .lock p { font-weight:700; font-size:.9rem; }
+    .btn-video { background:#d42a2a; color:#fff; text-decoration:none; font-weight:800; font-size:.9rem;
+                 letter-spacing:.05em; padding:12px 24px; border-radius:6px; box-shadow:0 6px 20px rgba(212,42,42,.45); }
+    .btn-video:hover { filter:brightness(1.1); }
+    @media (max-width:600px) { .player { aspect-ratio:4/5; } }
+    .hd { position:absolute; top:10px; right:10px; background:var(--accent); color:var(--accent-txt);
+          font-size:.7rem; font-weight:800; padding:2px 6px; border-radius:3px; }
+    .controles { position:absolute; left:0; right:0; bottom:0; padding:8px 12px 10px;
+                 background:linear-gradient(transparent, rgba(0,0,0,.8)); display:flex; flex-direction:column; gap:8px; }
+    .progresso { height:4px; background:rgba(255,255,255,.25); border-radius:2px; overflow:hidden; }
+    .progresso i { display:block; width:4%; height:100%; background:var(--accent); }
+    .icones { display:flex; align-items:center; justify-content:space-between; }
+    .icones div { display:flex; gap:14px; align-items:center; }
+
+    .info { padding:14px 16px; border-bottom:1px solid var(--bg3); display:flex; flex-direction:column; gap:8px; }
+    .selo { align-self:flex-start; background:rgba(245,158,11,.12); color:var(--accent); border:1px solid rgba(245,158,11,.4);
+            border-radius:4px; padding:3px 8px; font-size:.7rem; font-weight:800; letter-spacing:.05em; }
+    .info h1 { font-size:1.25rem; font-weight:800; line-height:1.25; }
+    .legenda { color:var(--text2); font-size:.95rem; line-height:1.45; }
+
+    .venda { margin:16px; background:var(--bg2); border:1px solid var(--bg3); border-radius:8px; padding:16px;
+             display:flex; flex-direction:column; gap:12px; }
+    .inclui { list-style:none; display:flex; flex-direction:column; gap:4px; font-size:.9rem; }
+    .inclui li::first-letter { color:var(--accent); }
+    .preco { display:flex; align-items:baseline; gap:10px; }
+    .valor { font-size:1.8rem; font-weight:800; }
+    .nota { color:var(--text2); font-size:.85rem; }
+    .btn { background:var(--accent); color:var(--accent-txt); border:0; border-radius:6px; padding:12px 28px;
+           font:800 .9rem Inter,sans-serif; letter-spacing:.05em; cursor:pointer; text-decoration:none; }
+    .btn:hover { filter:brightness(1.08); }
+    .btn-grande { display:block; text-align:center; padding:15px; font-size:1rem; }
+    .seguro { color:var(--text2); text-align:center; font-size:.78rem; }
+    body { padding-bottom:84px; }
+    .fixo { position:fixed; left:0; right:0; bottom:0; z-index:5; background:rgba(0,0,0,.92);
+            border-top:1px solid var(--bg3); padding:10px 16px calc(10px + env(safe-area-inset-bottom)); }
+    .fixo-in { max-width:760px; margin:0 auto; display:flex; align-items:center; gap:12px; }
+    .fixo-preco { font-weight:800; font-size:1.3rem; white-space:nowrap; }
+    .fixo .btn { flex:1; text-align:center; padding:14px; font-size:1rem; background:#d42a2a; color:#fff;
+                 box-shadow:0 6px 20px rgba(212,42,42,.45); }
+
+    .idade { position:fixed; inset:0; background:rgba(0,0,0,.94); display:flex; align-items:center;
+             justify-content:center; padding:16px; z-index:10; }
+    .idade[hidden] { display:none; }
+    .idade div { max-width:360px; background:var(--bg2); border:1px solid var(--bg3); border-radius:8px;
+                 padding:24px; text-align:center; display:flex; flex-direction:column; gap:14px; }
+    .idade small { color:var(--text2); line-height:1.45; }
+    .idade strong { font-size:1.2rem; }
+    .idade-icone { font-size:2rem; }
+    .idade .idade-botoes { background:none; border:0; padding:0; gap:10px; }
+    .idade-sim { background:#d42a2a; color:#fff; padding:14px; }
+    .idade-sair { background:transparent; color:#d42a2a; border:1px solid #d42a2a; padding:13px; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <header class="barra">
+    <div class="barra-in">
+      <a class="logo" href="#"><span>⚠️ SENSITIVE CONTENT — 18+</span></a>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="info">
+      <h1>🚨 VIDEO CIRCULATING</h1>
+      <p class="legenda">An alleged leaked video involving singer Tyla is generating widespread attention across social media.</p>
+    </div>
+
+    <div class="player">
+      <video id="teaser" autoplay loop muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload noplaybackrate" oncontextmenu="return false;"></video>
+      <span class="hd">HD</span>
+      <div class="lock">
+        <span class="play">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </span>
+        <p>Locked Video</p>
+        <a class="btn-video" href="https://smoopay.app/pay/HVPY0OAb" rel="noopener">UNLOCK VIDEO ACCESS</a>
+      </div>
+    </div>
+
+    <div class="venda" id="comprar">
+      <ul class="inclui">
+        <li>✔ Full video, no blur</li>
+        <li>✔ HD quality</li>
+        <li>✔ Instant access after payment</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Botão fixo no ecrã -->
+  <div class="fixo">
+    <div class="fixo-in">
+      <span class="fixo-preco">R49</span>
+      <a class="btn" href="https://smoopay.app/pay/HVPY0OAb" rel="noopener">UNLOCK NOW</a>
+    </div>
+  </div>
+
+  <!-- Age confirmation -->
+  <div class="idade" id="idade" hidden>
+    <div>
+      <span class="idade-icone">⚠️</span>
+      <strong>Sensitive Content</strong>
+      <small>This page contains sensitive content intended for adults only. By continuing, you confirm that you are 18 years or older.</small>
+      <div class="idade-botoes">
+        <button class="btn idade-sim" id="confirmaIdade">YES, I AM 18+</button>
+        <a class="btn idade-sair" href="https://www.google.com" rel="noopener">NO, I'M NOT — EXIT</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Meta Pixel: clique no botão de pagamento = InitiateCheckout
+    document.querySelectorAll('a[href*="smoopay.app/pay"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (window.fbq) fbq('track', 'InitiateCheckout', { value: 49, currency: 'ZAR' });
+      });
+    });
+
+    // Carrega o teaser por script: o link fica "blob:" e deixa de funcionar fora desta página
+    fetch("videos/teaser.mp4", { headers: { "X-Video-Token": "sc18-teaser" } })
+      .then(function (r) { if (!r.ok) throw 0; return r.blob(); })
+      .then(function (b) {
+        var v = document.getElementById("teaser");
+        v.src = URL.createObjectURL(b);
+        v.play().catch(function () {});
+      })
+      .catch(function () {});
+
+    var gate = document.getElementById('idade');
+    if (localStorage.getItem('ageVerified') !== 'true') gate.hidden = false;
+    document.getElementById('confirmaIdade').onclick = function () {
+      localStorage.setItem('ageVerified', 'true');
+      gate.hidden = true;
+    };
+  </script>
+</body>
+</html>
